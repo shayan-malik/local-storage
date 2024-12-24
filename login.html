@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <label for="loginemail">Email:
+        <input type="email" id="loginemail">
+    </label>
+<br>
+    <label for="loginpassword">Password:
+        <input type="password" id="loginpassword">
+    </label>
+<br>
+    <button onclick="login()">Login</button>
+
+
+    <script>
+        function login(){
+            let email = document.getElementById("loginemail").value;
+            let password = document.getElementById("loginpassword").value;
+
+            let loginemail = localStorage.getItem("email");
+            let loginpassword = localStorage.getItem("password");
+
+            if(email == loginemail){
+                if(password == loginpassword){
+                    alert("Login Successfully")
+                }
+                else{
+                    alert("Password Not Valid")
+                }
+            }
+            else{
+                alert("Email Not Valid")
+            }
+        }
+    </script>
+</body>
+</html>
