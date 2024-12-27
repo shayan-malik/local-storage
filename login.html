@@ -25,7 +25,10 @@
             let loginemail = localStorage.getItem("email");
             let loginpassword = localStorage.getItem("password");
 
-            if(email == loginemail){
+            if(email == "" || password == ""){
+                alert("Please fill in this field ")
+            }
+            else if(email == loginemail){
                 if(password == loginpassword){
                     alert("Login Successfully")
                 }
