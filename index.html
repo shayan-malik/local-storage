@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +36,13 @@
         localStorage.setItem("username", username);
         localStorage.setItem("email", useremail);
         localStorage.setItem("password", userpassword);
+
+        if(username == "" || useremail == "" || userpassword == ""){
+            alert("Please fill in this field ")
+        }
+        else{
         alert("Sign Up Successfully Goto Login Page")
+        }
     }
 </script>
 </body>
